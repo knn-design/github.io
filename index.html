@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: #fafaf8; color: #333; }
+header { padding: 60px 40px 40px; text-align: center; }
+h1 { font-size: 2rem; font-weight: normal; letter-spacing: 0.2em; color: #555; }
+p.tagline { margin-top: 10px; font-size: 0.9rem; color: #999; letter-spacing: 0.1em; }
+.works { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px; max-width: 1000px; margin: 0 auto; }
+.card { background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-body { padding: 20px; }
+.card-body h2 { font-size: 1rem; font-weight: normal; letter-spacing: 0.1em; margin-bottom: 8px; }
+.card-body p { font-size: 0.85rem; color: #888; line-height: 1.6; }
+.card-body a { display: inline-block; margin-top: 12px; font-size: 0.8rem; color: #aaa; text-decoration: none; border-bottom: 1px solid #ddd; }
+footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #ccc; letter-spacing: 0.1em; }
+</style>
+</head>
+<body>
+<header>
+<h1>PORTFOLIO</h1>
+<p class="tagline">Web Design Works</p>
+</header>
+<section class="works">
+<div class="card">
+<img src="https://knn-design.github.io/my-portfolio/%E4%BF%AE%E4%BA%86%E8%AA%B2%E9%A1%8C%E6%9C%80%E6%96%B0/assets/images/bread1.jpg" alt="BAKERY DAYS">
+<div class="card-body">
+<h2>BAKERY DAYS</h2>
+<p>架空のパンレシピサイト。HTML / CSS / JavaScript</p>
+<a href="https://knn-design.github.io/my-portfolio/%E4%BF%AE%E4%BA%86%E8%AA%B2%E9%A1%8C%E6%9C%80%E6%96%B0/" target="_blank">View Site →</a>
+</div>
+</div>
+</section>
+<footer>knn-design</footer>
+</body>
+</html>
