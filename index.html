@@ -12,16 +12,15 @@ h1 { font-size: 2rem; font-weight: normal; letter-spacing: 0.2em; color: #555; }
 p.tagline { margin-top: 10px; font-size: 0.9rem; color: #999; letter-spacing: 0.1em; }
 .works { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px; max-width: 1000px; margin: 0 auto; }
 .card { background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-.card img { width: 100%; height: 200px; object-fit: cover; }
+.card img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; }
 .card-body { padding: 20px; }
 .card-body h2 { font-size: 1rem; font-weight: normal; letter-spacing: 0.1em; margin-bottom: 8px; }
 .card-body p { font-size: 0.85rem; color: #888; line-height: 1.6; }
 .card-body a { display: inline-block; margin-top: 12px; font-size: 0.8rem; color: #aaa; text-decoration: none; border-bottom: 1px solid #ddd; }
-footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #ccc; letter-spacing: 0.1em; 
-       .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999; justify-content: center; align-items: center; cursor: pointer; }
-        .modal.open { display: flex; }
-       .modal img { max-width: 90%; max-height: 90%; border-radius: 4px; }
-       .card img { cursor: pointer; }
+footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #ccc; letter-spacing: 0.1em; }
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; }
+.modal.open { display: flex; justify-content: center; align-items: center; }
+.modal img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
 </style>
 </head>
 <body>
@@ -31,7 +30,7 @@ footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #ccc; lett
 </header>
 <section class="works">
 <div class="card">
-<img src="https://knn-design.github.io/my-portfolio/%E4%BF%AE%E4%BA%86%E8%AA%B2%E9%A1%8C%E6%9C%80%E6%96%B0/assets/images/bread1.jpg" alt="BAKERY DAYS">
+<img src="https://knn-design.github.io/my-portfolio/%E4%BF%AE%E4%BA%86%E8%AA%B2%E9%A1%8C%E6%9C%80%E6%96%B0/assets/images/bread1.jpg" alt="BAKERY DAYS" onclick="openModal(this.src)">
 <div class="card-body">
 <h2>BAKERY DAYS</h2>
 <p>架空のパンレシピサイト。HTML / CSS / JavaScript</p>
@@ -39,45 +38,28 @@ footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #ccc; lett
 </div>
 </div>
 <div class="card">
-<img src="あまおう.png" alt="ストロベリーフェア">
+<img src="あまおう.png" alt="ストロベリーフェア" onclick="openModal(this.src)">
 <div class="card-body">
 <h2>STRAWBERRY FAIR</h2>
 <p>カフェのSNSバナー。Canva</p>
 </div>
 </div>
 <div class="card">
-<img src="あまおう2.png" alt="ストロベリーフェア2">
+<img src="あまおう2.png" alt="ストロベリーフェア2" onclick="openModal(this.src)">
 <div class="card-body">
 <h2>STRAWBERRY FAIR 2</h2>
 <p>カフェのSNSバナー。Canva</p>
 </div>
 </div>
 <div class="card">
-<img src="SUMMER.png" alt="サマードレス">
+<img src="SUMMER.png" alt="サマードレス" onclick="openModal(this.src)">
 <div class="card-body">
 <h2>SUMMER DRESS</h2>
 <p>ファッションのSNSバナー。Canva</p>
 </div>
 </div>
 <div class="card">
-<img src="毛穴・くすみが気になるあなたへ.png" alt="エステサロン">
+<img src="毛穴・くすみが気になるあなたへ.png" alt="エステサロン" onclick="openModal(this.src)">
 <div class="card-body">
 <h2>エステサロン</h2>
-<p>サロンのSNSバナー。Canva</p>
-</div>
-</div>
-</section>
-<footer>knn-design</footer>
-<div class="modal" id="modal" onclick="this.classList.remove('open')">
-<img id="modal-img" src="" alt="">
-</div>
-<script>
-document.querySelectorAll('.card img').forEach(img => {
-  img.addEventListener('click', function() {
-    document.getElementById('modal-img').src = this.src;
-    document.getElementById('modal').classList.add('open');
-  });
-});
-</script>
-</body>
-</html>
+<p>サロンのSNSバナー
